@@ -1,0 +1,181 @@
+medidas para saber como se destrubuye el modelo:
+
+Medidas de centralizacion: nos indica como de centrado estan losdatos
+
+- media aritmetica: sumar todos los valores d ela muestra y dividirlo por el numero de ocurrencias
+
+- mediana:  si ordenaramos todo los datos de nuestro tira de datos, de mas pequeño el primero y el mas grande al final, la mediana seria el queda en el medio. si tengo dos valores(muestra par) en el medio, tomo los dos y hago la media entre los dos valores.
+
+- moda: es el valor q mas aparece
+
+- percentiles: es igual q la mediana, deja todo por debajo de un valor y nada por arriba.
+ej: percentil 0%, 25%, 50% 75%.
+
+Medidas de dispercion: para saber si los datos estan muy dispersos o concentrados
+
+- varianza:  son una forma de medir como los valores se desplazan con respecto a la media. siempre es positiva. cualquier medida que tuviera al elevada al cuadrado nos pone en una nueva dimensiones, por lo que se introduce la desviacion tipica para quitar la dimension. 
+si el valor es pequeño quiere decir que tiene poca variabilidad
+
+- desviacion tipica: es la raiz de la varianza de la varianza, es positivo siempre.
+
+- coeficiente de variancion: nos mida la variabilidad relativa entre la media y desviacion tipica. (media/desviacion tipica)*100. es un porcentaje
+
+Medidas de asimetria
+
+- asimetria de fisher
+
+- curtosis
+
+-----------------------------------
+
+Poblacion: es casi imposible de usar porque es muy grande.
+
+Muestra: es un subconjunto de la poblacion. esta la que vamos a usar para estudiar. podemos calcular cualquier estadistico para la muestra. nos ayuda a estimar los parametros de la poblacion
+
+Teorema central del limite: si el tamaño de la muestra es lo sufiente grande, la distribucion se supone q es normal. 
+
+como los valroes son estimados, los resultados los doy a travez de intervalos. utilizando cierots intervalos de confianza utilizando test de hipostesis
+
+
+----------------
+
+contraste de hipotesis:
+
+asumimos una hipotesis con el valor que tiene que tomar el estimador. trata de afirmarlo estadisticamente
+
+- hipotess nula: intenamos determinar si la afirmacion es cierta o no.
+- hipotesis alternativa: lo contrario a la nula
+
+para decicdir cual de las dos es cierta, la hipotesis nula es la premicia iniical es lo que queremos defender ques es cierto hasta q se demuestre lo cobtrario. 
+la h alternativa no estamos muy seguros, contraduci a la hipotesis nula, la usamos cuando no hay mas remedio.
+
+con buscada cuantitiva para calcular un estimador y conocemos el valor del parametro, ese valor lo tomamos como hipotesis nula y el nuevo valor que se quiere probar lo tomo como hipotesis alternativa
+
+
+Ahora de validar un test de hipotesis debemos utilizar la z o el t student.
+- Tomamaos una muestra aleatoria simple de tamaño n.
+- calculamos el promedio del parametro que queramos(mx). segun el teorema central del limite tienede a ser normal.
+- con desviacion conocida: calculamos el parametro z, para estandirazar. (sigue una dsitribucion normal)
+- con desviacion desconocida: debemos estimar la desviacion tipica(el tdl deja de tener validaes, debemos llevar el test t). La estimacion de la desvicaion debe estimarse a la vez q lo hacemos con el promedio(con el t student. LOs datos se distribuyen segun la distribucion t).
+
+
+---------------
+
+COMO HACER UN TEST DE HIPOTESIS PASO POR PASO:
+
+para cualquier estimador uso intervalos de confianzas: si mi estimador cae dentro del rango, es validad mi hipotesis nula.
+
+PARA DEFINIR EL INTERVALO DE CAONFIANZA: debemos definir la probabilidad de confianza, el nivel de significacia se lo conoce como 1- p(alfa). representa la significacion de que la hipotesis nula no sea cierta. sea falsa.
+
+si p-valor es mayor a alfa ---> mi estudio me da razones para aceptar la hipotesis nula y rechazar la hipotesis alternativa.
+si p-valor menor a alfa ---> tenemos evidencia para poder rechazar la hipotesis nula y aceptar como valida la alternativa
+
+HAY DOS FORMAS DE CONCLUIR SI ACEPTAMOR O BIEN RECHAZAMOS LA HIPOTESIS NULA:
+- COMPARANDO ESTADISTICOS
+- COMPRANDO EL P-VALOR CON EL NIVEL DE SIGNIFICACION
+
+PASOS:
+1- definir hipotesis nula y alternativa uni o bilateral
+nula: algo q asumimos que es cierto, lo defiendo
+alternativo: es lo contrario
+2- tomar una muestra aleatoria de tamaño n y calculamos el valor del estimador(promedio, proporcion...)
+3- calcular el estadistico de constraste z-valor o t-valor
+4- calcular el p-valor asociado: la probabilidad de q la distribucion dea mayor o menor, y comparamos el pvalor y el valor de significacion
+5- comparar p-valor y nivel de significacion y decidir
+
+ejemplo:
+el pizerro afirma que es cpaz de llevar las pizas en un promedio inferior de 20 minutos, como sospecho q no es asi, llamo a varios amigos para comprobar y cronometre el tiempo, llamo el total a 63 amigos, y el promedio es 21.4
+h nula mu menor y igual a 20
+h alternativa mayor a 20
+desviacion es 3 minutos()
+tamaño = 64
+media 21.4
+
+asumimosun nivel de confianza del 95% y significacion del 0.05
+
+PODEMOS ACEPTAR SU AFIRMACION A UN NIVEL DE CONFIANZA DEL 95%?
+calculamos el z = 3.2
+pvalor = p(z>3.2) = 1- p(z<3.2) = 1 -0.999 = 0.001 < 0.05 = alfa
+
+rechazamos la hipotesis nulo, es decir q el tarda mas en traer la pizza 
+------
+
+
+TEST DE CHI CUADRADO: es utilizado para comparador los datos observador con los esperados. siguiendo una hipotesis determininado
+h nula que los datos siguen una determinada distribucion y en base a esa hipotesis calcular cuales serian los valores esperados.
+
+bodad de ajusta: comprobar si los datos vienen de una fuente de confianza, si los datos que tenemos no se ajusta  a la distribucion la bandad falla.
+
+Para comparar dos variables:
+test de homogeneidad: 
+test de independencia: nos ayuda a mostrar una relacion o independecia entre dos variables.
+h nula existe independencia entre dos variables
+
+
+ejemplo: 
+
+la chi cuadrado tiene grados libertad, este etst necesita saber los grados. 
+
+bondad de ajuste = df= ncategoria -1
+
+queremos comprobar si una moneda esta trucada
+h0: la proporcion de caras y cruces es 0.5
+h1: la proporcion no es 0.5
+observa<: 553 caras 447 cruces
+esperado 500
+
+
+x2 = 11.236
+
+chi cuadrado con un solo grado de libertad: n categoria -1 = 2 categoria -1 = 1
+
+el estadistico limite = 3.841(buscamos en la tabla con una signiciacion 0.05 y 1 grado de libertad) y el de chi cuadrado es 11.286
+rechazamos la hipotesis nula.
+
+-----
+PRUEBA DE INDEPENDECIA:
+
+EJ prbar el sexo de un estudiante es independiente la carrera que elijan:
+h0 es independiente
+h1 no es independente
+
+chicuadrado = 3.9 (es la sumatoria)
+
+chi cuadrado con dos grados de libertad y 0.05 de significacncia = 5.991465
+por lo que x2 < x2 con dos grados de liber...
+por lo tanto no podemos rachazar la hipotesis nula
+
+-----------------------------
+
+CORRELECION:
+ SE USA PARA ENCONTRAR RELACION ENTRE DOS VARIABLES.
+es la capacidad de encontrar el factor que me permita determinar la salida del modelo.
+es una relacion matematica que se establece entre dos variables devido la naturaleza de la variable y nos permite predecir los valores de salida.
+para determinar el grado de corelacion existe el coeficiente de corerelacion de pearson
+el valor va a estar entre -1 y 1.
+una corelaccion positivo es que abra una relacion directa entre dos variables, es decir si aumenta una aumenta la otra
+si es muy cercana a cero, no hay q darle mucha importancia.
+si es negativa, tiene una relacion iversa sobre la otra. si una aumenta la otra decrece.
+
+una coreccion fuerte quiere decir que se puede utilizar para crear un modelo, pero q exista correlacion no significa q haye un unico factor q explique la casualidad.
+LA CORELLACION NO IMPLICA A LA CASUALIDAD.
+
+ejemplo:
+en phyton ya viene implementado:
+data_ads.corr()
+
+para pintar la matris de corelaccion
+plt.matshow(data_ads.corr())
+
+
+
+
+
+
+
+
+
+
+
+
+

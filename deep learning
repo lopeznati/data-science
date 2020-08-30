@@ -1,0 +1,19 @@
+pip install NumPy
+pip install matplotlib
+pip install IPython
+pip install scikit-learn
+
+tensorFlow
+deeplearing es un conjunto de algoritmo que se inspira en que como funciona un cerrebro humano.
+tensorflow s un sofware de google para entrenar modelos.
+red neuronal, cada nodo representa una operacion matematica y las rams rerpresta los datos fluyendo a travez de array multidimencionales o tensores.
+es un flujo de tensores a lo largo del algoritmo
+
+
+deep learning y aprendisaje no supervisado:
+una red nueoronal es capaz de predecir un valor de interes.
+los modelos pueden tener cientos y miles de parametros, estan compuestos de unidades sensillas.
+red neuronales: la mas simple es el percentron, dada una entrada x la funcion nos deveuelve 1 o 0.
+
+
+instalo tensorflow: pip install tensorflow==1.15

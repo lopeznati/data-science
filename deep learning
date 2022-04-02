@@ -17,3 +17,22 @@ red neuronales: la mas simple es el percentron, dada una entrada x la funcion no
 
 
 instalo tensorflow: pip install tensorflow==1.15
+
+-------------------------
+conda create -n cv --clone base
+conda activate cv
+
+pip install --upgrade pip
+pip install opencv-python
+pip install --upgrade tensorflow
+
+python
+
+pip install cmake
+pip install dlib
+
+arrancar jupiter
+
+jupiter-lab
+
+conda info --envs
